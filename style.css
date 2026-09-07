@@ -146,3 +146,31 @@ nav{
 main{
     margin-top: 20px;
 }
+
+/*************************MEDIA*************************/
+#suurkast{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 70%;
+    margin: auto;
+}
+
+#suurkast section{
+    border: 2px solid lightgray;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: floralwhite;
+}
+
+#pildigalerii div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+#pildigalerii img{
+    width: 100%; /* Muudab pildi suurust et see sobiks konteinerisse */
+    border-radius: 10px;
+}
