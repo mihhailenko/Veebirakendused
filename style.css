@@ -1,0 +1,148 @@
+h1{
+    font-size: x-large;
+    font-family: georgia, "sans-serif";
+    color: orangered; /* teksti värv */
+    background-color: #deadface; /* taustavärv */
+}
+
+header h1{
+    padding: 5%;
+    /* background-color: floralwhite; */
+    font-variant: small-caps;
+}
+
+header {
+    background-color: floralwhite;
+    background-image: url('pilt.png');
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
+
+footer{
+    padding: 5%;
+    background-color: floralwhite;
+    font-variant: small-caps;
+    border-top: 2px solid lightgray;
+    /*position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;*/
+}
+
+section#kast1 {
+    border: 2px solid lightgray;
+    width: 25%;
+    margin: 10px;
+    padding: 1%;
+    border-radius: 20px;
+    text-align: center;
+    background-color: floralwhite;
+}
+
+section#kast2 {
+    border: 2px dashed gray;
+    width: 25%;
+    margin: 10px;
+    padding: 1%;
+    border-radius: 10px 40px;
+    text-align: left;
+    background-color: lightgray;
+}
+
+section#kast3 {
+    border: 3px double orangered;
+    width: 25%;
+    margin: 10px;
+    padding: 2%;
+    border-radius: 30px;
+    text-align: center;
+    color: orangered;
+}
+
+section#kast4 {
+    border: 2px dotted gray;
+    width: 25%;
+    margin: 10px;
+    padding: 2%;
+    border-radius: 50px 10px 50px 10px;
+    text-align: right;
+    background-color: floralwhite;
+}
+
+section#kast5 {
+    border: 2px solid orangered;
+    width: 30%;
+    margin: 15px;
+    padding: 1%;
+    border-radius: 10px;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+section#kast6 {
+    border: 3px double lightgray;
+    width: 30%;
+    margin: 15px;
+    padding: 2%;
+    border-radius: 60px;
+    text-align: left;
+    background-color: #deadface;
+    font-family: georgia, "sans-serif";
+}
+
+section#kast7 {
+    border: 2px dashed orangered;
+    width: 30%;
+    margin: 15px;
+    padding: 2%;
+    border-radius: 10px 80px 10px 80px;
+    text-align: center;
+    color: red;
+    font-variant: small-caps;
+}
+
+
+/*************************NAV*************************/
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    color: red;
+    text-decoration: none; /* Kustutab alljoone */
+    text-align: center;
+    padding: 10px;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+    border-radius: 20%;
+    font-variant: small-caps;
+}
+
+nav ul li a:hover{
+    background-color: orangered;
+    color: white;
+}
+
+nav{
+    padding: 10px;
+    margin: 10px;
+}
+
+main{
+    margin-top: 20px;
+}
