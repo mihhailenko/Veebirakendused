@@ -1,8 +1,17 @@
+#lipud{
+    position: absolute;
+    top: 0;
+    left: 40%;
+}
+
 #eesti {
     width: 330px;
     height: 210px;
     border: 1px solid lightgray;
     border-spacing: 0;
+    position: absolute;
+    top: 50px;
+    left: 40%;
 }
 
 #eesti tr:nth-child(1) td {
@@ -20,3 +29,4 @@
 #eesti td {
     border: none;
 }
+
