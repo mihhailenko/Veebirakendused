@@ -1,0 +1,22 @@
+#eesti {
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+}
+
+#eesti tr:nth-child(1) td {
+    background-color: blue;
+}
+
+#eesti tr:nth-child(2) td {
+    background-color: black;
+}
+
+#eesti tr:nth-child(3) td {
+    background-color: white;
+}
+
+#eesti td {
+    border: none;
+}
