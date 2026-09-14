@@ -30,3 +30,103 @@
     border: none;
 }
 
+#taani {
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 280px;
+    left: 40%;
+}
+
+#taani tr:nth-child(1) td:nth-child(1),
+#taani tr:nth-child(3) td:nth-child(1)
+{
+    background-color: red;
+    width: 100px;
+}
+
+#taani tr:nth-child(2) td{
+    background-color: white;
+    height: 45px;
+}
+
+#taani tr:nth-child(1) td:nth-child(3),
+#taani tr:nth-child(3) td:nth-child(3)
+{
+    background-color: red;
+    width: 160px;
+}
+
+#taani tr:nth-child(1) td:nth-child(2),
+#taani tr:nth-child(3) td:nth-child(2)
+{
+    background-color: white;
+    width: 55px;
+}
+
+#taani td{
+    border: 0px solid lightgray;
+}
+
+#prantsusmaa {
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 510px;
+    left: 40%;
+}
+
+#prantsusmaa tr:nth-child(1) td:nth-child(1){
+    background-color: blue;
+    width: 110px;
+}
+
+#prantsusmaa tr:nth-child(2) td:nth-child(1){
+    background-color: white;
+    width: 110px;
+}
+
+#prantsusmaa tr:nth-child(3) td:nth-child(1){
+    background-color: red;
+    width: 110px;
+}
+
+
+#benin {
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 740px;
+    left: 40%;
+}
+
+#benin tr:nth-child(1) td:nth-child(1){
+    background-color: green;
+    width: 110px;
+}
+
+#benin tr:nth-child(2) td:nth-child(1){
+    background-color: yellow;
+    width: 220px;
+}
+
+#benin tr:nth-child(3) td:nth-child(1){
+    background-color: red;
+    width: 220px;
+}
+
+#šveits {
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 970px;
+    left: 40%;
+}
