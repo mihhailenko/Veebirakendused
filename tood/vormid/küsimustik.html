@@ -9,58 +9,112 @@
 <div>HTML vormid ja nupud</div>
 <form action="#">
     <!-- c + tab = komentaar -->
-    <label for="nimi">Nimi:</label>
-    <input type="text" id="nimi"  placeholder="Sisesta oma nimi">
-    <br>
-    <!-- ripploend või rippmenüü -->
-    <label for="stiil">Millist muusikat kuulad?</label>
-    <select id="stiil">
-        <option value="vali">vali...</option>
-        <option value="hiphop">Hiphop</option>
-        <option value="pop">Pop</option>
-        <option value="rock">Rock</option>
-        <option value="klassikaline">Klassikaline</option>
-        <option value="jazz">Jazz</option>
-        <option value="metal">Metal</option>
-    </select>
-    <!-- radio nupud 1 valik mitmest -->
-    <br>
-    <strong>Kuidas sa muusikat peamiselt kuulad?</strong>
-    <br>
-    <input type="radio" id="telefon" name="kuulamine" value="spotify">
-    <label for="telefon">Spotify</label>
-    <br>
-    <input type="radio" id="raadio" name="kuulamine" value="raadio">
-    <label for="raadio">Raadio</label>
-    <br>
-    <input type="radio" id="vinüülplaat" name="kuulamine" value="vinüülplaat">
-    <label for="vinüülplaat">Vinüülplaat</label>
 
-    <!-- checkbox -->
-    <fieldset>
-        <legend>Tee oma valik - lemmik ansambel</legend>
-        <input type="checkbox" id="metallica" name="ansambel" value="metallica">
-        <label for="metallica">Metallica</label>
-        <br>
-        <input type="checkbox" id="queen" name="ansambel" value="queen">
-        <label for="queen">Queen</label>
-        <br>
-        <input type="checkbox" id="nirvana" name="ansambel" value="nirvana">
-        <label for="nirvana">Nirvana</label>
-        <br>
-        <input type="checkbox" id="beatles" name="ansambel" value="beatles">
-        <label for="beatles">The Beatles</label>
-        <br>
-        <input type="checkbox" id="acdc" name="ansambel" value="acdc">
-        <label for="acdc">AC/DC</label>
-    </fieldset>
 
-    <!-- range - vahemik -->
-    <label for="tund">
-        Mitu tundi päevas sa muusikat kuulad?
-    </label>
-    0<input type="range" id="tund" name="tund" min="0" max="24">24
+
     <br>
+
+    <table border="1">
+        <tr>
+            <td><label for="nimi">Nimi:</label></td>
+            <td>
+                <input type="text" id="nimi" name="nimi" placeholder="Sisesta oma nimi">
+            </td>
+        </tr>
+        <tr>
+            <!-- ripploend või rippmenüü -->
+            <td><label for="stiil">Millist muusikat kuulad?</label></td>
+            <td>
+                <select id="stiil">
+                    <option value="vali">vali...</option>
+                    <option value="hiphop">Hiphop</option>
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="klassikaline">Klassikaline</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="metal">Metal</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <!-- radio nupud 1 valik mitmest -->
+            <td><strong>Kuidas sa muusikat peamiselt kuulad?</strong></td>
+            <td>
+                <input type="radio" id="telefon" name="kuulamine" value="spotify">
+                <label for="telefon">Spotify</label>
+                <br>
+                <input type="radio" id="raadio" name="kuulamine" value="raadio">
+                <label for="raadio">Raadio</label>
+                <br>
+                <input type="radio" id="vinüülplaat" name="kuulamine" value="vinüülplaat">
+                <label for="vinüülplaat">Vinüülplaat</label>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <!-- checkbox -->
+                <fieldset>
+                    <legend>Tee oma valik - lemmik ansambel</legend>
+                    <input type="checkbox" id="metallica" name="ansambel" value="metallica">
+                    <label for="metallica">Metallica</label>
+                    <br>
+                    <input type="checkbox" id="queen" name="ansambel" value="queen">
+                    <label for="queen">Queen</label>
+                    <br>
+                    <input type="checkbox" id="nirvana" name="ansambel" value="nirvana">
+                    <label for="nirvana">Nirvana</label>
+                    <br>
+                    <input type="checkbox" id="beatles" name="ansambel" value="beatles">
+                    <label for="beatles">The Beatles</label>
+                    <br>
+                    <input type="checkbox" id="acdc" name="ansambel" value="acdc">
+                    <label for="acdc">AC/DC</label>
+                </fieldset>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <!-- range - vahemik -->
+                <label for="tund">
+                    Mitu tundi päevas sa muusikat kuulad?
+                </label>
+
+            </td>
+            <td>
+                0<input type="range" id="tund" name="tund" min="0" max="24">24
+            </td>
+        </tr>
+        <tr>
+            <td>Milline on sinu lemmikvärv?</td>
+            <td><input type="color" id="varv" name="varv"></td>
+        </tr>
+        <!-- 5 veel erinevad type input -->
+        <tr>
+            <td><label for="email">Sisesta e-posti aadress:</label></td>
+            <td><input type="email" id="email" name="email" placeholder="example@example.com"></td>
+        </tr>
+        <tr>
+            <td><label for="tel">Sisesta oma telefoninumber:</label></td>
+            <td><input type="tel" id="tel" name="tel" placeholder="51234567"></td>
+        </tr>
+        <tr>
+            <td><label for="date">Milline on sinu sünnipäev?:</label></td>
+            <td><input type="date" id="date" name="date"></td>
+        </tr>
+        <tr>
+            <td><label for="number">Sisesta oma lemmik number:</label></td>
+            <td><input type="number" id="number" name="number" placeholder="1-99"></td>
+        </tr>
+        <tr>
+            <td><label for="url">Sisesta oma lemmik veebileht:</label></td>
+            <td><input type="url" id="url" name="url" placeholder="https://example.com"></td>
+        </tr>
+    </table>
+    <!-- confirm -->
+    <br>
+    <p>Kas oled kindel, et soovid vormi esitada?</p>
+    <input type="submit" value="Saada">
+    <input type="reset" value="Reset">
 </form>
 </body>
 </html>
