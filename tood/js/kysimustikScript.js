@@ -85,6 +85,37 @@ function textareaValik() {
     return textareaValue;
 }
 
+function raadioValik() {
+    let vastus7 = document.getElementById("vastus7");
+    let radioValue = document.querySelector('input[name="raadio"]:checked');
+
+    if (radioValue) {
+        vastus7.innerHTML = "Sinu valik: " + radioValue.value;
+        vastus7.style.backgroundColor = "lightred";
+    } else {
+        vastus7.innerHTML = "Palun vali üks valik.";
+        vastus7.style.backgroundColor = "lightred";
+    }
+    return radioValue ? radioValue.value : null;
+}
+
+// raadio jaamad
+function jaamValik() {
+    let vastus8 = document.getElementById("vastus8");
+    let jaamValue = document.getElementById("jaam").value;
+
+    if (jaamValue.trim() === "") {
+        vastus8.innerHTML = "Palun sisesta raadiojaamade nimed.";
+        vastus8.style.backgroundColor = "lightgreen";
+    } else {
+        vastus8.innerHTML = "Sinu valik: " + jaamValue;
+        vastus8.style.backgroundColor = "lightgreen";
+    }
+
+    return jaamValue;
+}
+
+
 // kasutab teisi funktsioone
 function naitaKoike() {
     let vastusKoik = document.getElementById("vastusKoik");
@@ -94,6 +125,9 @@ function naitaKoike() {
     let checkbox = checkboxValik();
     let tund = rangeValik();
     let select = selectValik();
+    let textarea = textareaValik();
+    let raadio = raadioValik();
+    let jaam = jaamValik();
 
     vastusKoik.innerHTML =
         "Sinu nimi on: " + nimi + "<br>" +
@@ -101,7 +135,9 @@ function naitaKoike() {
         "Sinu valik on: " + checkbox + "<br>" +
         "Sa kuuled muusikat " + tund + " tundi päevas.<br>" +
         "Sinu valik on: " + select + "<br>" +
-        "Sinu arvamus on: " + textareaValik() + "<br>";
+        "Sinu arvamus on: " + textarea + "<br>" +
+        "Kas sa kuuled raadiot: " + raadio + "<br>" +
+        "Sinu valitud raadiojaam on: " + jaam;
 }
 
 
@@ -112,5 +148,7 @@ function puhastaVorm() {
     vastus4.innerHTML = "";
     vastus5.innerHTML = "";
     vastus6.innerHTML = "";
+    vastus7.innerHTML = "";
+    vastus8.innerHTML = "";
     vastusKoik.innerHTML = "";
 }
