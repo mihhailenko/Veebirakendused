@@ -69,6 +69,21 @@ function selectValik() {
     return selectValue;
 }
 
+// textarea
+function textareaValik() {
+    let vastus6 = document.getElementById("vastus6");
+    let textareaValue = document.getElementById("arvamus").value;
+
+    if (textareaValue.trim() === "") {
+        vastus6.innerHTML = "Palun kirjuta arvamus.";
+        vastus6.style.backgroundColor = "lightpink";
+    } else {
+        vastus6.innerHTML = "Sinu arvamus: " + textareaValue;
+        vastus6.style.backgroundColor = "lightpink";
+    }
+
+    return textareaValue;
+}
 
 // kasutab teisi funktsioone
 function naitaKoike() {
@@ -85,7 +100,8 @@ function naitaKoike() {
         "Sinu lemmikud on: " + radio + "<br>" +
         "Sinu valik on: " + checkbox + "<br>" +
         "Sa kuuled muusikat " + tund + " tundi päevas.<br>" +
-        "Sinu valik on: " + select + "<br>";
+        "Sinu valik on: " + select + "<br>" +
+        "Sinu arvamus on: " + textareaValik() + "<br>";
 }
 
 
@@ -95,5 +111,6 @@ function puhastaVorm() {
     vastus3.innerHTML = "";
     vastus4.innerHTML = "";
     vastus5.innerHTML = "";
+    vastus6.innerHTML = "";
     vastusKoik.innerHTML = "";
 }

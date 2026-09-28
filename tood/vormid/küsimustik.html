@@ -139,6 +139,17 @@
             <td><label for="url">Sisesta oma lemmik veebileht:</label></td>
             <td><input type="url" id="url" name="url" placeholder="https://example.com"></td>
         </tr>
+        <tr>
+            <td>
+                <label for="arvamus">Mida arvad muusika kuulamisest koolis?:</label>
+            </td>
+            <td>
+                <textarea id="arvamus" name="arvamus" rows="4" cols="50" placeholder="Kirjuta oma arvamus siia..." oninput="textareaValik()"></textarea>
+            </td>
+            <td>
+                <div id="vastus6"></div>
+            </td>
+        </tr>
     </table>
     <!-- confirm -->
     <br>
@@ -147,7 +158,7 @@
             <p>Kas oled kindel, et soovid vormi esitada?</p>
         </td>
         <td>
-            <input type="submit" value="Saada" onclick="naitaKoike()">
+            <input type="button" value="Saada" onclick="naitaKoike()">
         </td>
         <td>
             <input type="reset" value="Puhasta" onclick="puhastaVorm()">
