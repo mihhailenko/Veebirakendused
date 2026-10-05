@@ -74,6 +74,8 @@ function radioValik() {
     let meeldib = document.getElementById("jah").checked;
     let eiMeeldi = document.getElementById("ei").checked;
     let pilt = document.getElementById("meeldibPilt");
+    // valideerimise jaoks on vaja src, seetõttu kasutame hidden
+    pilt.hidden = false;
 
     if (meeldib){
         vastus4.innerHTML = "Programmeerimine meeldib!";
@@ -165,5 +167,5 @@ function puhastaVorm() {
     document.getElementById("vastus5").style.backgroundColor = "";
     document.getElementById("vastus6").style.backgroundColor = "";
 
-    document.getElementById("meeldibPilt").src = "";
+    document.getElementById("meeldibPilt").hidden = true;
 }
