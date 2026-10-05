@@ -11,11 +11,25 @@ function nimiLugemiseKastist() {
 // radio valikud
 function radioValik() {
     let kuulamine = document.querySelector('input[name="kuulamine"]:checked');
-    let vastus2  = document.getElementById("vastus2");
+    let vastus2 = document.getElementById("vastus2");
+    let pilt = document.getElementById("kuulaminePilt");
 
     let value = kuulamine ? kuulamine.value : "Pole valitud";
+
     vastus2.innerHTML = "Sinu valik: " + value;
     vastus2.style.backgroundColor = "lightblue";
+
+    if (value === "Spotify") {
+        pilt.src = "https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg";
+    }
+
+    if (value === "Raadio") {
+        pilt.src = "https://png.pngtree.com/png-vector/20240804/ourmid/pngtree-orange-vintage-radio-clipart---retro-illustration-png-image_13371250.png";
+    }
+
+    if (value === "Vinüülplaat") {
+        pilt.src = "https://upload.wikimedia.org/wikipedia/commons/7/75/Vinyl_record.svg";
+    }
 
     return value;
 }
