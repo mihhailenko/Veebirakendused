@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="kalkStyle.css">
     <script src="kalkScript.js"></script>
     <script src="kalk2Script.js"></script>
+    <script src="kalk3Script.js"></script>
 </head>
 <body>
 <h1>Kalkulaator</h1>
@@ -22,14 +23,18 @@
         <input type="radio" name="valik" id="toll" value="t" onchange="teisendamine()">
         <label for="toll">Toll</label>
         <br>
-        <div id="vastus"></div>
+        <div id="teisendamiseTulemus" hidden>
+            <img src="images/meeter.jpg" alt="Mõõdulint" id="meetriPilt">
+            <div id="vastus"></div>
+        </div>
     </section>
     <section id="kalk2">
         <h2>Joogi kalkulaator</h2>
         <label for="kogus">Mitu tk soovid:</label>
         <input type="number" id="kogus" min="1" max="100" step="1" value="1" oninput="joogiKalkulaator()">
-        <label for="joogid">Vali jooki:</label>
-        <select name="joogid" id="joogid" oninput="joogiKalkulaator()">
+        <br>
+        <label for="joogid">Vali jook:</label>
+        <select name="joogid" id="joogid" onchange="joogiKalkulaator()">
             <option value="vali">vali...</option>
             <option value="coca">Coca-Cola</option>
             <option value="monster">Monster</option>
@@ -37,9 +42,34 @@
             <option value="vesi">Vesi</option>
         </select>
         <br>
-        <div id="vastus2"></div>
+        <div id="joogiTulemus" hidden>
+            <img src="images/coca.png" alt="Coca Cola" id="joogiPilt" hidden>
+            <div id="vastus2"></div>
+        </div>
     </section>
-    <section id="kalk3">kalk3</section>
+    <section id="kalk3">
+
+        <h2>Kohvikulu kalkulaator</h2>
+        <p>Arvuta, kui palju kulub kohvile aastas.</p>
+        <label for="kohv">Vali kohv:</label>
+        <select name="kohv" id="kohv" onchange="kohviKalkulaator()">
+            <option value="vali">vali...</option>
+            <option value="espresso">Espresso - 1,50 €</option>
+            <option value="cappuccino">Cappuccino - 2,50 €</option>
+            <option value="latte">Latte - 3,00 €</option>
+        </select>
+        <br>
+        <label for="kohviKogus">Mitu tassi päevas ostad:</label>
+        <input type="number" id="kohviKogus" min="1" max="20" step="1" value="1" oninput="kohviKalkulaator()">
+        <br>
+        <input type="checkbox" id="nadalavahetus" onchange="kohviKalkulaator()">
+        <label for="nadalavahetus">Ostan kohvi ka nädalavahetusel</label>
+        <div id="kohviTulemus" hidden>
+            <img src="images/espresso.jpg" alt="Espresso tass" id="kohviPilt">
+            <div id="vastus3">Vali kohv, et näha tulemust.</div>
+        </div>
+
+    </section>
 </section>
 
 </body>

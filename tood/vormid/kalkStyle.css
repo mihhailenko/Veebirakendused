@@ -1,3 +1,8 @@
+body{
+    background-color: linen;
+    margin: 20px;
+}
+
 section#yld{
     display: flex;
     flex-direction: row;
@@ -5,6 +10,7 @@ section#yld{
 }
 
 section#kalk1{
+    background-color: honeydew;
     border: 1pt solid gray;
     border-radius: 10px;
     width: 30%;
@@ -12,6 +18,7 @@ section#kalk1{
 }
 
 section#kalk2{
+    background-color: aliceblue;
     border: 1pt solid gray;
     border-radius: 10px;
     width: 30%;
@@ -19,8 +26,56 @@ section#kalk2{
 }
 
 section#kalk3{
+    background-color: cornsilk;
     border: 1pt solid gray;
     border-radius: 10px;
     width: 30%;
     padding: 10px;
+}
+
+input{
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+select{
+    margin-top: 8px;
+    margin-bottom: 12px;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#arv{
+    padding: 8px;
+    border: 1px solid seagreen;
+    border-radius: 5px;
+    width: 100px;
+}
+
+#kogus{
+    padding: 8px;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    width: 80px;
+}
+
+#kohviKogus{
+    padding: 8px;
+    border: 1px solid saddlebrown;
+    border-radius: 5px;
+    width: 60px;
+}
+
+#teisendamiseTulemus, #joogiTulemus, #kohviTulemus{
+    background-color: white;
+    border: 1px solid tan;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#meetriPilt, #joogiPilt, #kohviPilt{
+    width: 160px;
+    margin-bottom: 10px;
 }
