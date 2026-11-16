@@ -27,8 +27,38 @@
                 $('#peida').show();
             });
 
+
+            // pildi sujuv peitmine ja kuvamine
+            $('#pildikuva').hide();
+            $('#pildipeida').click(function () {
+                $('#Pilt').fadeToggle(500);
+                $(this).hide();
+                $('#pildikuva').show();
+            });
+            $('#pildikuva').click(function () {
+                $('#Pilt').fadeToggle(500);
+                $(this).hide();
+                $('#pildipeida').show();
+            });
+
+            // lisainfo avamine ja sulgemine
+            $('#lisainfo').hide();
+            $('#infosulge').hide();
+            $('#infoava').click(function () {
+                $('#lisainfo').slideToggle(500);
+                $(this).hide();
+                $('#infosulge').show();
+            });
+            $('#infosulge').click(function () {
+                $('#lisainfo').slideToggle(500);
+                $(this).hide();
+                $('#infoava').show();
+            });
+
+
             start();
         });
+
         function start(){
             $('#sisu').draggable();
             $('#Pilt').draggable();
@@ -67,16 +97,16 @@
 <main>
 
     <input type="button" value="<---" id="vasakule" style="display:none"
-           onclick="$('#sisu, h2').animate({left: '-=500px'}, 500); $(this).hide(); $('#paremale').show();">
+           onclick="$('#sisu, #tere').animate({left: '-=500px'}, 500); $(this).hide(); $('#paremale').show();">
 
     <input type="button" value="--->" id="paremale"
-           onclick="$('#sisu, h2').animate({left: '+=500px'}, 500); $(this).hide(); $('#vasakule').show();">
+           onclick="$('#sisu, #tere').animate({left: '+=500px'}, 500); $(this).hide(); $('#vasakule').show();">
 
     <input type="button" value="Peida" id="peida">
     <input type="button" value="Kuva" id="kuva">
 
     <section id="kast1">
-        <h2>Tere tulemast!</h2>
+        <h2 id="tere">Tere tulemast!</h2>
         <p id="sisu">See on index leht mis on tehtud 1. veebirakenduste tunnis!
             Palun vajuta teise lingi peale ning kontrolli et sise on täidetud!
         </p>
@@ -86,6 +116,33 @@
         <h3>Põnev pilt</h3>
         <div><img src="pilt.png" alt="Põnev pilt" id="Pilt"></div>
         <div id="vastus"></div>
+
+
+        <input type="button" value="Peida pilti" id="pildipeida">
+        <input type="button" value="Kuva pilti" id="pildikuva">
+
+        <input type="button" value="Ava lisainfo" id="infoava">
+        <input type="button" value="Sulge lisainfo" id="infosulge">
+
+        <p id="lisainfo">
+            Seda pilti saab hiirega liigutada ja selle koordinaate vaadata.
+        </p>
+
+    </section>
+
+    <section id="selgitus">
+        <h2>jQuery'ga tehtud</h2>
+        <div>
+            <ul>
+            <li>pilti saab hiirega liigutada (draggable)</li>
+            <li>sisu saab liigutada paremale ja vasakule noolenuppudega</li>
+            <li>Peida ja Kuva nuppudega saab teksti peita ja näidata</li>
+            <li>pildi ja sisu koordinaadid on näha all kui neid liigutada</li>
+            <li>Peida pilti ja Kuva pilti nuppudega saab pilti peida ja näidata (fadeToggle)</li>
+            <li>Ava lisainfo ja Sulge lisainfo nuppudega saab lisateksti pildi kohta avada ja sulgeda (slideToggle)</li>
+                <br>
+            </ul>
+        </div>
     </section>
 </main>
 <!--jalus-->
