@@ -1,3 +1,4 @@
+
 <!DOCTYPE html> <!--kommentaar-->
 <html lang="en">
 <head>
@@ -5,6 +6,42 @@
     <meta charset="UTF-8">
     <title>Artjom Mihhailenko veebirakenduste aluste tööd</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#kuva').hide();
+            // nupu peida vajutamine
+            $('#peida').click(function () {
+                $('#sisu').hide(500);
+                $(this).hide();
+                $('#kuva').show();
+            });
+            // nupu kuva vajutamine
+            $('#kuva').click(function () {
+                $('#sisu').show(500);
+                $(this).hide();
+                $('#peida').show();
+            });
+
+            start();
+        });
+        function start(){
+            $('#sisu').draggable();
+            $('#Pilt').draggable();
+            $('#Pilt').bind("drag", xyKoordinat);
+            $('#sisu').bind("drag", xyKoordinat);
+
+        }
+
+        function xyKoordinat(event, ui) {
+            let koht = ui.offset;
+            $('#vastus').html("X: " + koht.left + " Y: " + koht.top);
+        }
+    </script>
 </head>
 <body>
 <!--veebilehe sisu-->
@@ -28,20 +65,32 @@
 </nav>
 <!--põhisisu-->
 <main>
+
+    <input type="button" value="<---" id="vasakule" style="display:none"
+           onclick="$('#sisu, h2').animate({left: '-=500px'}, 500); $(this).hide(); $('#paremale').show();">
+
+    <input type="button" value="--->" id="paremale"
+           onclick="$('#sisu, h2').animate({left: '+=500px'}, 500); $(this).hide(); $('#vasakule').show();">
+
+    <input type="button" value="Peida" id="peida">
+    <input type="button" value="Kuva" id="kuva">
+
     <section id="kast1">
         <h2>Tere tulemast!</h2>
-        <p>See on index leht mis on tehtud 1. veebirakenduste tunnis!
-        Palun vajuta teise lingi peale ning kontrolli et sise on täidetud!
+        <p id="sisu">See on index leht mis on tehtud 1. veebirakenduste tunnis!
+            Palun vajuta teise lingi peale ning kontrolli et sise on täidetud!
         </p>
     </section>
+
     <section id="kast2">
         <h3>Põnev pilt</h3>
-        <div><img src="pilt.png" alt="Põnev pilt"></div>
+        <div><img src="pilt.png" alt="Põnev pilt" id="Pilt"></div>
+        <div id="vastus"></div>
     </section>
 </main>
 <!--jalus-->
 <footer>
-    <p>&copy; 2026 Artjom Mihhailenko veebrirakenduste aluste tööd. Kõik õigused kaitstud.</p>
+    <p>© 2026 Artjom Mihhailenko veebrirakenduste aluste tööd. Kõik õigused kaitstud.</p>
 </footer>
 </body>
 </html>

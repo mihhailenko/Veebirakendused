@@ -174,3 +174,12 @@ main{
     width: 100%; /* Muudab pildi suurust et see sobiks konteinerisse */
     border-radius: 10px;
 }
+
+
+h2 {
+    position: relative;
+}
+
+#sisu {
+    position: relative;
+}
